@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Create screenshots
-        run: fastlane screenshots
+        run: bundle exec fastlane snapshot --verbose
       - name: Run tests
         run: fastlane tests
