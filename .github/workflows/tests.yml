@@ -10,12 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Setup ruby
-        uses: ruby/setup-ruby@v1.138.0
-        with:
-         ruby-version: 3.2.1
-         bundler-cache: true
       - name: Create screenshots
-        run: bundle exec fastlane snapshot --verbose
+        run: fastlane screenshots --verbose
       - name: Run tests
         run: fastlane tests
